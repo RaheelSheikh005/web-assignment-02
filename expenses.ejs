@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenses List</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <a href="/" class="back-button">← Back</a>
+    <h1>Your Expenses</h1>
+    
+    <div class="expenses-list">
+      <% expenses.forEach(expense => { %>
+        <div class="expense-item">
+          <div class="expense-details">
+            <span class="expense-name"><%= expense.itemName %></span>
+            <span class="expense-amount">Rs <%= expense.amount.toFixed(2) %></span>
+            <span class="expense-category"><%= expense.category %></span>
+            <span class="expense-date"><%= expense.date %></span>
+          </div>
+          <div class="expense-actions">
+            <a href="/edit/<%= expense.id %>" class="btn btn-edit">Edit</a>
+            <form action="/delete/<%= expense.id %>" method="POST">
+              <button type="submit" class="btn btn-delete">Delete</button>
+            </form>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</body>
+</html>

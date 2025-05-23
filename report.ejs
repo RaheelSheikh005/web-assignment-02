@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Report</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <a href="/" class="back-button">← Back</a>
+    
+    <div class="report-card">
+      <h1>Expense Report</h1>
+      
+      <div class="balance-section">
+        <h2>Remaining Balance</h2>
+        <p class="balance-amount">Rs <%= balance.toFixed(2) %></p>
+      </div>
+      
+      <div class="expenses-summary">
+        <h2>Recent Expenses</h2>
+        <div class="expenses-list">
+          <% expenses.slice(0, 5).forEach(expense => { %>
+            <div class="expense-item">
+              <span><%= expense.itemName %></span>
+              <span>Rs <%= expense.amount.toFixed(2) %></span>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+      
+      <a href="/expenses" class="btn btn-primary">View All Expenses</a>
+    </div>
+  </div>
+</body>
+</html>
