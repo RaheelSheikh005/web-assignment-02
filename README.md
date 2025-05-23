@@ -1,1 +1,1 @@
-# web-assignment-02
+# web-assignment-02 (Expense Tracker App)
