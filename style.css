@@ -1,0 +1,202 @@
+:root {
+  --primary: #3498db;
+  --primary-dark: #2980b9;
+  --secondary: #f8f9fa;
+  --danger: #e74c3c;
+  --danger-dark: #c0392b;
+  --text: #2c3e50;
+  --text-light: #7f8c8d;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+  color: var(--text);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: var(--text);
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.subtitle {
+  color: var(--text-light);
+  margin-bottom: 30px;
+  display: block;
+  font-size: 0.9rem;
+}
+
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.form-group input {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background-color: #e9ecef;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.expenses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.expense-item {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expense-details {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.expense-name {
+  font-weight: 500;
+}
+
+.expense-amount {
+  color: var(--danger);
+  font-weight: 500;
+}
+
+.expense-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-edit {
+  background-color: var(--primary);
+  color: white;
+  padding: 5px 15px;
+}
+
+.btn-delete {
+  background-color: var(--danger);
+  color: white;
+  padding: 5px 15px;
+}
+
+.report-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.balance-section {
+  text-align: center;
+}
+
+.balance-amount {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 10px;
+}
+
+.expenses-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.expenses-summary .expense-item {
+  justify-content: space-between;
+}
