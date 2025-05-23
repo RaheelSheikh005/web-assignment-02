@@ -1,1 +1,3 @@
-web-assignment-02 (Expense Tracker App)
+# web-assignment-02 (Expense Tracker App) using MERN frameworks like Node.js and Express.js
+# Applying the concepts of Routes, Server programming and EJS (Embedded Javascript)
+# Used proper CSS for stylings, JSON method for NoSql data storage and more...
